@@ -1,19 +1,11 @@
 # title
-![GitHub release (latest by date)](https://img.shields.io/github/v/release/aivruu/title)
-[![GPL License](https://img.shields.io/badge/license-GPL-blue)](LICENSE)
+`title` is a packet-level library designed for make titles, actionbars and more of easy and efficient way.
 
-`title` is a packet-based simple library for Bukkit platforms to show titles, actionbars and more.
+Check out the documentation at [Notion](https://www.notion.so/qeklydev/Title-e880e5827fc04eda8a0cd3901905ef6b).
 
 # Building
-`./gradlew shadowJar`
-
-# Import
-```gradle
-implementation("com.github.aivruu.title:base:RELEASE")
-implementation("com.github.aivruu.title:ADAPT:RELEASE")
-// Check the available adapts in 'adapt/'.
-
-shadowJar {
-  relocate("com.aivruu.title", "com.yourPackage.libs.title")
-}
+To build the project, type the next command. You must've Gradle, and Java 17 or newer.
+```ruby
+./gradlew clean
+./gradlew shadowJar
 ```
