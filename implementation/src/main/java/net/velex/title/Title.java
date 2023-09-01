@@ -57,22 +57,22 @@ public interface Title {
    *
    * @return The server version on use.
    */
-  static int serverRelease() {
+  static byte serverRelease() {
     String version = Bukkit.getVersion();
-    short index = version.lastIndexOf("MC:");
+    byte index = (byte) version.lastIndexOf("MC:");
     // Checks if the 'index' value isn't -1.
     // Else, check if the 'version' ends with 'SNAPSHOT'.
     if (index != -1) {
       version = version.substring(index + 4, version.length() - 1);
     } else if (version.endsWith("SNAPSHOT")) {
-      index = version.indexOf('-');
+      index = (byte) version.indexOf('-');
       version = version.substring(0, index);
     }
-    final short lastDot = version.lastIndexOf('.');
+    final byte lastDot = (byte) version.lastIndexOf('.');
     // Checks if the index of the 'version' value are distinct of 'lastDot' value.
     if (version.indexOf('.') != lastDot) {
       version = version.substring(0, lastDot);
     }
-    return Short.parseShort(version.substring(2));
+    return Byte.parseByte(version.substring(2));
   }
 }
