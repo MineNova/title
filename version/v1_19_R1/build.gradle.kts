@@ -3,6 +3,8 @@ plugins {
   id("io.papermc.paperweight.userdev") version("1.5.5")
 }
 
+java.toolchain.languageVersion.set(JavaLanguageVersion.of(17))
+
 dependencies {
   api(project(":api"))
   
