@@ -5,3 +5,6 @@ charset = utf-8
 indent_size = 2
 indent_style = space
 max_line_length = off
+
+# Intellij IDEA
+ij_java_class_count_to_use_import_on_demand = 10
