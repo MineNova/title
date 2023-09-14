@@ -1,7 +1,5 @@
 package net.minenova.title.enums;
 
-import net.minenova.title.ServerAdaptModel;
-
 public enum Result {
   /**
    * Indicates that there was something to try to modify packet data.
