@@ -75,7 +75,7 @@ public class VersionServerAdaptImpl implements ServerAdaptModel {
   public @NotNull Result setFooter(final @NotNull Player player, final @NotNull String footer) {
     final PacketDataSerializer packetDataSerializer = new PacketDataSerializer(Unpooled.buffer());
     packetPlayOutPlayerListHeaderFooter = new PacketPlayOutPlayerListHeaderFooter();
-    connection = ((CraftPlayer) player).getHandle().playerConnection;\
+    connection = ((CraftPlayer) player).getHandle().playerConnection;
     packetDataSerializer.a(CraftChatMessage.fromString(footer)[0]);
     packetDataSerializer.a(CraftChatMessage.fromString("")[0]);
     try {
