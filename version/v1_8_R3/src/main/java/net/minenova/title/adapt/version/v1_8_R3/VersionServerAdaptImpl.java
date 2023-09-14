@@ -1,9 +1,9 @@
-package net.velex.title.version.v1_8_R3;
+package net.minenova.title.adapt.version.v1_8_R3;
 
 import io.netty.buffer.Unpooled;
 import net.minecraft.server.v1_8_R3.*;
-import net.velex.title.api.ServerAdaptModel;
-import net.velex.title.api.enums.Result;
+import net.minenova.title.adapt.ServerAdaptModel;
+import net.minenova.title.enums.Result;
 import org.bukkit.craftbukkit.v1_8_R3.entity.CraftPlayer;
 import org.bukkit.craftbukkit.v1_8_R3.util.CraftChatMessage;
 import org.bukkit.entity.Player;
@@ -20,9 +20,9 @@ public class VersionServerAdaptImpl implements ServerAdaptModel {
     final @NotNull Player player,
     final @NotNull String title,
     final @NotNull String subtitle,
-    final int fadeIn,
-    final int stay,
-    final int fadeOut
+    final byte fadeIn,
+    final byte stay,
+    final byte fadeOut
   ) {
     connection = ((CraftPlayer) player).getHandle().playerConnection;
     connection.sendPacket(new PacketPlayOutTitle(fadeIn, stay, fadeOut));
@@ -42,7 +42,6 @@ public class VersionServerAdaptImpl implements ServerAdaptModel {
     final PacketDataSerializer packetDataSerializer = new PacketDataSerializer(Unpooled.buffer());
     packetPlayOutPlayerListHeaderFooter = new PacketPlayOutPlayerListHeaderFooter();
     connection = ((CraftPlayer) player).getHandle().playerConnection;
-    
     try {
       packetDataSerializer.a(CraftChatMessage.fromString(footer)[0]);
       packetDataSerializer.a(CraftChatMessage.fromString(header)[0]);
@@ -60,7 +59,6 @@ public class VersionServerAdaptImpl implements ServerAdaptModel {
     final PacketDataSerializer packetDataSerializer = new PacketDataSerializer(Unpooled.buffer());
     packetPlayOutPlayerListHeaderFooter = new PacketPlayOutPlayerListHeaderFooter();
     connection = ((CraftPlayer) player).getHandle().playerConnection;
-    
     try {
       packetDataSerializer.a(CraftChatMessage.fromString("")[0]);
       packetDataSerializer.a(CraftChatMessage.fromString(header)[0]);
@@ -102,7 +100,6 @@ public class VersionServerAdaptImpl implements ServerAdaptModel {
     final PacketPlayOutPlayerInfo playerInfoPacket = new PacketPlayOutPlayerInfo();
     final PacketDataSerializer packetDataSerializer = new PacketDataSerializer(Unpooled.buffer());
     connection = ((CraftPlayer) player).getHandle().playerConnection;
-    
     try {
       packetDataSerializer.a(PacketPlayOutPlayerInfo.EnumPlayerInfoAction.UPDATE_DISPLAY_NAME);
       packetDataSerializer.a(player.getUniqueId());
