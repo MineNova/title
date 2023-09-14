@@ -1,4 +1,6 @@
-package net.velex.title.api.enums;
+package net.minenova.title.enums;
+
+import net.minenova.title.ServerAdaptModel;
 
 public enum Result {
   /**
@@ -6,17 +8,17 @@ public enum Result {
    */
   PACKET_WRITE_ERROR,
   /**
-   * Indicates that there was an error to install the adapt correspond to the server version.
+   * Indicates that there was an error to install it adapt correspond to the server version.
    */
   ADAPT_INTERNAL_ERROR,
   /**
-   * Indicates that the adapt to install is already installed for usage.
+   * Indicates that it adapt to install is already installed for usage.
    */
   ADAPT_ALREADY_INSTALLED,
   /**
-   * Indicates that the current implementation can't be assignable to the current {@link net.velex.title.api.ServerAdaptModel} instance.
+   * Indicates that the current implementation can't be assignable to the current {@link ServerAdaptModel} instance.
    */
-  ADAPT_IMPL_NOT_ASSIGNABLE,
+  ADAPT_NOT_ASSIGNABLE,
   /**
    * Indicates that it operation is not supported for the current version.
    */
@@ -34,7 +36,7 @@ public enum Result {
    */
   SHOULD_FOOTER,
   /**
-   * Indicates that the operation (send title, install adapt, etc) was completed successfully.
+   * Indicates that the operation (send title, install adapt, and more) was completed successfully.
    */
   SUCCESS,
 }
