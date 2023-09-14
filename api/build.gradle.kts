@@ -17,7 +17,7 @@ tasks {
     destinationDirectory.set(file("$rootDir/bin/"))
     minimize()
     
-    relocate("org.jetbrains.annotations", "net.velex.title.annotations")
+    relocate("org.jetbrains.annotations", "net.minenova.title.annotations")
   }
   
   clean {

@@ -5,6 +5,6 @@ plugins {
 dependencies {
   api(project(":api"))
   
-  compileOnly(libs.nms16)
+  compileOnly(libs.nms12)
   implementation(libs.annotations)
 }

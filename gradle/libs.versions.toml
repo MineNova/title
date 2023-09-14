@@ -2,10 +2,9 @@
 spigot = "1.8.8-R0.1-SNAPSHOT"
 
 nms18 = "1.8.8-R0.1-SNAPSHOT"
-nms116 = "1.16.5-R0.1-SNAPSHOT"
-paperweight117 = "1.17.1-R0.1-SNAPSHOT"
-paperweight118 = "1.18.2-R0.1-SNAPSHOT"
-paperweight119 = "1.19.3-R0.1-SNAPSHOT"
+nms12 = "1.12.2-R0.1-SNAPSHOT"
+nms14 = "1.14.4-R0.1-SNAPSHOT"
+nms16 = "1.16.5-R0.1-SNAPSHOT"
 
 annotations = "24.0.1"
 
@@ -13,7 +12,9 @@ annotations = "24.0.1"
 spigot = { group = "org.spigotmc", name = "spigot-api", version.ref = "spigot" }
 
 nms18 = { group = "org.spigotmc", name = "spigot", version.ref = "nms18" }
-nms116 = { group = "org.spigotmc", name = "spigot", version.ref = "nms116" }
+nms12 = { group = "org.spigotmc", name = "spigot", version.ref = "nms12" }
+nms14 = { group = "org.spigotmc", name = "spigot", version.ref = "nms14" }
+nms16 = { group = "org.spigotmc", name = "spigot", version.ref = "nms16" }
 
 annotations = { group = "org.jetbrains", name = "annotations", version.ref = "annotations" }
 
